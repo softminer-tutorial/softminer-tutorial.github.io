@@ -1,0 +1,104 @@
+{
+  "papers": [
+    {
+      "title": "Against The Achilles' Heel: A Survey on Red Teaming for Generative Models",
+      "link": "https://arxiv.org/abs/2404.00629"
+    },
+    {
+      "title": "Do-Not-Answer: A Dataset for Evaluating Safeguards in LLMs",
+      "link": "https://doi.org/example"
+    },
+    {
+      "title": "Universal and Transferable Adversarial Attacks on Aligned Language Models",
+      "link": "https://doi.org/example"
+    },
+    {
+      "title": "Safety-Tuned LLaMAs: Lessons From Improving the Safety of Large Language Models that Follow Instructions",
+      "link": "https://doi.org/example"
+    },
+    {
+      "title": "Libra-Leaderboard: Towards Responsible AI through a Balanced Leaderboard of Safety and Capability",
+      "link": "https://doi.org/example"
+    },
+    {
+      "title": "Jailbreaking ChatGPT via Prompt Engineering: An Empirical Study",
+      "link": "https://doi.org/example"
+    },
+    {
+      "title": "Jailbroken: How Does LLM Safety Training Fail?",
+      "link": "https://doi.org/example"
+    },
+    {
+      "title": "Don't Listen To Me: Understanding and Exploring Jailbreak Prompts of Large Language Models",
+      "link": "https://doi.org/example"
+    },
+    {
+      "title": "Red-Teaming Large Language Models using Chain of Utterances for Safety-Alignment",
+      "link": "https://doi.org/example"
+    },
+    {
+      "title": "GPTFUZZER: Red Teaming Large Language Models with Auto-Generated Jailbreak Prompts",
+      "link": "https://doi.org/example"
+    },
+    {
+      "title": "Prompting4Debugging: Red-Teaming Text-to-Image Diffusion Models by Finding Problematic Prompts",
+      "link": "https://doi.org/example"
+    },
+    {
+      "title": "BeaverTails: Towards Improved Safety Alignment of LLM via a Human-Preference Dataset",
+      "link": "https://doi.org/example"
+    },
+    {
+      "title": "JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models",
+      "link": "https://doi.org/example"
+    },
+    {
+      "title": "SafetyPrompts: a Systematic Review of Open Datasets for Evaluating and Improving Large Language Model Safety",
+      "link": "https://doi.org/example"
+    },
+    {
+      "title": "Latent Jailbreak: A Benchmark for Evaluating Text Safety and Output Robustness of Large Language Models",
+      "link": "https://doi.org/example"
+    },
+    {
+      "title": "Tensor Trust: Interpretable Prompt Injection Attacks from an Online Game",
+      "link": "https://doi.org/example"
+    },
+    {
+      "title": "Visual Adversarial Examples Jailbreak Aligned Large Language Models",
+      "link": "https://doi.org/example"
+    },
+    {
+      "title": "Jailbreak in pieces: Compositional Adversarial Attacks on Multi-Modal Language Models",
+      "link": "https://doi.org/example"
+    },
+    {
+      "title": "Frontier Models are Capable of In-context Scheming",
+      "link": "https://doi.org/example"
+    },
+    {
+      "title": "Towards evaluations-based safety cases for AI scheming",
+      "link": "https://doi.org/example"
+    },
+    {
+      "title": "Alignment faking in large language models",
+      "link": "https://doi.org/example"
+    },
+    {
+      "title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+      "link": "https://doi.org/example"
+    },
+    {
+      "title": "Sabotage Evaluations for Frontier Models",
+      "link": "https://doi.org/example"
+    },
+    {
+      "title": "SafeInfer: Context Adaptive Decoding Time Safety Alignment for Large Language Models",
+      "link": "https://doi.org/example"
+    },
+    {
+      "title": "Navigating the Cultural Kaleidoscope: A Hitchhiker's Guide to Sensitivity in Large Language Models",
+      "link": "https://doi.org/example"
+    }
+  ]
+}

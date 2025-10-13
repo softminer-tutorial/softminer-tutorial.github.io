@@ -1,0 +1,78 @@
+{
+  "organizers": [
+    {
+      "name": "John Doe",
+      "affiliationNumbers": [1, 2],
+      "affiliation": "University One, Lab Name",
+      "image": "https://i.pravatar.cc/150?img=12",
+      "website": "https://example.com/johndoe"
+    },
+    {
+      "name": "Jane Smith",
+      "affiliationNumbers": [1, 2],
+      "affiliation": "University One, Lab Name",
+      "image": "https://i.pravatar.cc/150?img=47",
+      "website": "https://example.com/janesmith"
+    },
+    {
+      "name": "Alice Johnson",
+      "affiliationNumbers": [1, 3],
+      "affiliation": "University One, University Two",
+      "image": "https://i.pravatar.cc/150?img=32",
+      "website": "https://example.com/alicejohnson"
+    },
+    {
+      "name": "Bob Williams",
+      "affiliationNumbers": [4],
+      "affiliation": "University Three",
+      "image": "https://i.pravatar.cc/150?img=68",
+      "website": "https://example.com/bobwilliams"
+    },
+    {
+      "name": "Carol Martinez",
+      "affiliationNumbers": [5],
+      "affiliation": "University Four",
+      "image": "https://i.pravatar.cc/150?img=59",
+      "website": "https://example.com/carolmartinez"
+    },
+    {
+      "name": "David Brown",
+      "affiliationNumbers": [1, 2, 6],
+      "affiliation": "University One, Lab Name, University Five",
+      "image": "https://i.pravatar.cc/150?img=45",
+      "website": "https://example.com/davidbrown"
+    }
+  ],
+  "affiliations": [
+    {
+      "number": 1,
+      "name": "University One",
+      "website": "https://example.com/universityone"
+    },
+    {
+      "number": 2,
+      "name": "Lab Name",
+      "website": "https://example.com/labname"
+    },
+    {
+      "number": 3,
+      "name": "University Two",
+      "website": "https://example.com/universitytwo"
+    },
+    {
+      "number": 4,
+      "name": "University Three",
+      "website": "https://example.com/universitythree"
+    },
+    {
+      "number": 5,
+      "name": "University Four",
+      "website": "https://example.com/universityfour"
+    },
+    {
+      "number": 6,
+      "name": "University Five",
+      "website": "https://example.com/universityfive"
+    }
+  ]
+}

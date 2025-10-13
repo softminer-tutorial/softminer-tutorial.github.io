@@ -1,0 +1,34 @@
+{
+  "title": "Datasets",
+  "intro": "Our research group has released several datasets for the community. All datasets are freely available for research purposes.",
+  "datasets": [
+    {
+      "name": "Dataset Name One",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "year": 2024,
+      "size": "10GB",
+      "format": "CSV, JSON",
+      "link": "https://example.com/dataset1",
+      "paper": "https://arxiv.org/abs/xxxx.xxxxx"
+    },
+    {
+      "name": "Dataset Name Two",
+      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "year": 2023,
+      "size": "5GB",
+      "format": "JSON, GraphML",
+      "link": "https://example.com/dataset2",
+      "paper": "https://arxiv.org/abs/xxxx.xxxxx"
+    },
+    {
+      "name": "Dataset Name Three",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "year": 2023,
+      "size": "2GB",
+      "format": "CSV, NetworkX",
+      "link": "https://example.com/dataset3",
+      "paper": "https://arxiv.org/abs/xxxx.xxxxx"
+    }
+  ]
+}
+

@@ -1,0 +1,26 @@
+{
+  "title": "News & Updates",
+  "newsItems": [
+    {
+      "date": "October 2024",
+      "title": "Lorem ipsum dolor sit amet consectetur",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      "date": "September 2024",
+      "title": "Sed ut perspiciatis unde omnis iste",
+      "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+    },
+    {
+      "date": "August 2024",
+      "title": "Quis autem vel eum iure reprehenderit",
+      "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti."
+    },
+    {
+      "date": "July 2024",
+      "title": "Temporibus autem quibusdam et aut",
+      "description": "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque."
+    }
+  ]
+}
+

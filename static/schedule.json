@@ -1,0 +1,86 @@
+{
+  "days": [
+    {
+      "dayNumber": 1,
+      "dayTitle": "Day 1: Foundations of AI Safety",
+      "date": "XX Month YYYY",
+      "sessions": [
+        {
+          "time": "9:00—9:15",
+          "title": "Introduction to AI Safety and Risks",
+          "topics": [
+            "Overview of harmful content, societal/ethical risks",
+            "Deceptive behavior, persuasive behavior",
+            "Possibility of \"model consciousness\" or self-awareness"
+          ],
+          "isBreak": false
+        },
+        {
+          "time": "9:15—10:00",
+          "title": "LLM Safety, Jailbreak, and Harmful Content",
+          "topics": [
+            "Common attack vectors and jailbreak techniques",
+            "Real-world examples of harmful or disallowed outputs",
+            "Defense approaches at training-time and inference-time"
+          ],
+          "isBreak": false
+        },
+        {
+          "time": "10:00—10:30",
+          "title": "Multi-modal and Agentic AI Safety",
+          "topics": [
+            "Vulnerabilities in text, image, audio, and video models",
+            "Risks of agentic AI systems taking autonomous actions",
+            "Red-teaming methods for complex, multi-modal systems"
+          ],
+          "isBreak": false
+        },
+        {
+          "time": "11:00—11:30",
+          "title": "Safe AI",
+          "topics": [
+            "Handling deception, persuasion, and emergent behaviors",
+            "Ongoing debates around model \"consciousness\" and awareness"
+          ],
+          "isBreak": false
+        },
+        {
+          "time": "11:30—12:00",
+          "title": "Defense",
+          "topics": [
+            "Layered strategies (training data, architecture, prompt engineering)",
+            "Real-time detection, filtering, and adversarial testing"
+          ],
+          "isBreak": false
+        },
+        {
+          "time": "12:00—1:00",
+          "title": "Lunch Break",
+          "topics": [],
+          "isBreak": true
+        },
+        {
+          "time": "1:00—2:00",
+          "title": "Hands-on Workshop: Red Teaming",
+          "topics": [
+            "Practical exercises in identifying vulnerabilities",
+            "Testing defense mechanisms",
+            "Group discussions on findings"
+          ],
+          "isBreak": false
+        },
+        {
+          "time": "2:00—2:30",
+          "title": "Case Studies",
+          "topics": [
+            "Real-world incidents and lessons learned",
+            "Industry best practices",
+            "Future challenges"
+          ],
+          "isBreak": false
+        }
+      ]
+    }
+  ]
+}
+
