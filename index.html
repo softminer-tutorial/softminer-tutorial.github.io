@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Website design inspired by LibrAI Research Tutorial Template
+    Original: https://librairesearch.github.io/tutorial/index.html
+    This is a custom implementation with original code and styling.
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACL Asia-Pacific Tutorial - AI Safety</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">ACL Asia-Pacific Tutorial</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#schedule" class="nav-link">Schedule</a></li>
+                <li><a href="#reading-list" class="nav-link">Reading List</a></li>
+                <li><a href="#slides" class="nav-link">Slides</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Banner Section -->
+    <div class="banner" id="home">
+        <div class="banner-text">
+            <div class="banner-title">Asia-Pacific Chapter of the Association for Computational Linguistics</div>
+            <div class="banner-location">Bombay, India</div>
+            <div class="banner-date">Date XX - YY</div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Tutorial Header -->
+        <header class="tutorial-header">
+            <h1>Asia-Pacific Chapter of ACL 2025 Tutorial</h1>
+            <h2 class="subtitle">Safety Issues for Generative AI</h2>
+            
+            <!-- Organizers Photos (in header) -->
+            <div class="organizers-photos" id="organizers-photos">
+                <!-- Content loaded from data/team.json -->
+            </div>
+        </header>
+
+        <!-- About Section -->
+        <section class="about animate-on-scroll" id="about">
+            <h2>About this tutorial</h2>
+            <div class="tutorial-info">
+                <p><strong>Time:</strong> <span id="tutorial-time">Monday, January 20, 2025</span></p>
+                <p><strong>Location:</strong> <span id="tutorial-location">TBD</span></p>
+            </div>
+            <p>
+                This tutorial will provide a fresh and comprehensive view of AI safety, examining issues such as harmful content, deceptive/persuasive model behaviors, and the possibility of "model consciousness." We will cover both theoretical and practical aspects of large language models (LLMs), multi-modal systems, and agentic AI, illustrating how to identify and address vulnerabilities—from common jailbreak attacks to complex, autonomous decision-making scenarios.
+            </p>
+            <p>
+                Attendees will learn cutting-edge attack and defense techniques, and will explore emerging research directions that balance AI innovation with robust safety strategies. This tutorial is geared toward AI researchers, developers, and security professionals who aim to stay ahead of evolving threats and ensure responsible development of next-generation AI systems.
+            </p>
+        </section>
+
+        <!-- Schedule Section -->
+        <section class="schedule animate-on-scroll" id="schedule">
+            <h2>Schedule</h2>
+            <div id="scheduleContent">
+                <!-- Schedule will be loaded dynamically from static/schedule.json -->
+            </div>
+        </section>
+
+
+        <!-- Reading List Section -->
+        <section class="reading-list animate-on-scroll" id="reading-list">
+            <h2>Reading List</h2>
+            <p class="section-intro">We've compiled a comprehensive reading list of papers related to AI safety. If you think that we're missing essential papers, please submit a pull request.</p>
+            <!-- Content loaded from data/reading-list.json -->
+        </section>
+
+        <!-- Tutorial Slides Section -->
+        <section class="slides animate-on-scroll" id="slides">
+            <h2>Tutorial Slides</h2>
+            <div class="slides-content">
+                <div class="pdf-preview">
+                    <iframe src="static/tutorial.pdf" width="100%" height="600px" type="application/pdf"></iframe>
+                </div>
+                <a href="static/tutorial.pdf" class="download-button" download="tutorial.pdf">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download Slides (PDF)
+                </a>
+            </div>
+        </section>
+
+        <!-- BibTeX Section -->
+        <section class="bibtex animate-on-scroll" id="bibtex">
+            <h2>BibTeX</h2>
+            <div class="bibtex-container">
+                <button class="copy-bibtex-btn" id="copyBibtexBtn" aria-label="Copy BibTeX">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <pre class="bibtex-code" id="bibtexCode"><code>@misc{doe2025tutorialaisafety,
+      title={Safety Issues for Generative AI}, 
+      author={John Doe and Jane Smith and Others},
+      year={2025},
+      note={Tutorial at Asia-Pacific Chapter of ACL 2025, Mumbai},
+      url={https://example.com}, 
+}</code></pre>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-bottom">
+                <p class="footer-license">
+                    This website is licensed under a 
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">
+                        Creative Commons Attribution-ShareAlike 4.0 International License
+                    </a>.
+                </p>
+                <p class="footer-source">
+                    <a href="https://github.com/yourusername/tutorial" target="_blank" rel="noopener noreferrer">
+                        Website source code
+                    </a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+</body>
+</html>
