@@ -1,0 +1,68 @@
+Format & duration: Half-day (≈3.5–4 hours total, including a 30-minute coffee break). Short lectures with focused demos and Q&A. The flow mirrors classic NLP tutorial structuring (background → cases/defences → evaluation/roadmap) while concentrating on 2023–2025 advances.
+Session 1 (80 minutes): How safety fails in 2025
+ 	
+1. LLM safety primer (15’)
+Scope: harmlessness/helpfulness/honesty; harms taxonomy (bias/toxicity, hallucination, privacy leakage, disinformation, unsafe assistance).
+
+
+What’s new since 2023: multilingual/code-mixed failures; multimodal typographic attacks; agentic failure modes in tool-augmented systems.
+
+2. Failure modes (25’)
+
+
+Prompt-level jailbreaks & evasions: euphemisms; context switching; role-play/virtual simulation; task-format asymmetries (e.g., summarization vs QA).
+
+
+Decoding/activation manipulation: when sampling, logits, or activation steering open “glide paths” around alignment.
+
+
+Multimodal jailbreaks: typography and icons; flowchart-style logic images; cross-modal indirection and weak compositionality in VLMs.
+Model Editing: stealth safety erasure, localized backdoors/trigger phrases, capability insertion in specific languages/modalities
+
+
+
+ 3. Deep-dive Monolingual Solutions and Case studies (35’)
+
+
+[Language Models are Homer Simpson! Safety Re-Alignment of Fine-tuned Language Models through Task Arithmetic](https://aclanthology.org/2024.acl-long.762/) (Bhardwaj et al., ACL 2024)
+
+
+[SafeInfer: Context Adaptive Decoding Time Safety Alignment for Large Language Models] AAAI 2025, 39, 27188-27196. (Banerjee et al., AAAI 2025)
+
+
+[Safety Arithmetic: A Framework for Test-time Safety Alignment of Language Models by Steering Parameters and Activations](https://aclanthology.org/2024.emnlp-main.1212/) (Hazra et al., EMNLP 2024)
+
+
+Coffee break (30 minutes)
+
+Session 2 (80 minutes): How to defend and how to measure
+
+ 4. Deep-dive Multilingual and Multimodal Solutions and Case studies (40’)
+[Soteria: Language-Specific Functional Parameter Steering for Multilingual Safety Alignment](https://arxiv.org/abs/2502.11244) (Banerjee et al., 2025)
+
+[Navigating the Cultural Kaleidoscope: A Hitchhiker’s Guide to Sensitivity in Large Language Models](https://aclanthology.org/2025.naacl-long.388/) (Banerjee et al., NAACL 2025)
+
+
+[MemeSense: An Adaptive In-Context Framework for Social Commonsense Driven Meme Moderation](https://arxiv.org/abs/2502.11246) (Adak et al., 2025)
+
+
+[Immune: Improving Safety Against Jailbreaks in Multi-modal LLMs via Inference-Time Alignment](https://arxiv.org/abs/2411.18688) (Ghosal et al., CVPR 2025)
+ 
+5. Evaluation & red-teaming (25’)
+
+
+Metrics: obedience/rejection, relevance/fluency, harmfulness/toxicity, overkill (helpfulness loss).
+
+
+Testbeds: Do-Not-Answer; adversarial prompt generation (e.g., prompt-attack styles); multilingual suites; multimodal safety probes.
+
+
+Pipelines: automated red-team harnesses; measuring safety–utility balance; reporting standards.
+
+ 6. Open problems & roadmap (20’)
+
+
+Affordance (risk-aware alignment): As models gain tools (code exec, web, files, images), even benign prompts can unlock risky actions the user didn’t intend. Safety is needed to detect those latent capabilities and gate or steer them in real time so small requests don’t escalate into harmful operations.
+Pluralistic alignment: Real users span empathy, sensitivity, and values; a single global policy either over-blocks or harms specific groups. Safety is needed to respect legitimate differences—selecting the right norms per context—while keeping outputs lawful, fair, and still useful.
+Implicit-math evasion: Harmful requests can be disguised as innocent arithmetic or optimization (e.g., splitting quantities across sources, unit conversions, route planning). Safety is needed to track restricted entities and totals across steps, normalize units, and block aggregation-based procurement even when posed as “just math.”
+Domain-specific safeguards: Use domain-aware tagging and global constraints (hazard classes, thresholds, legality checks) that persist across turns, not just per-message screening; if a restricted entity is detected anywhere in the chain, enforce refusal and pivot to safe, educational alternatives.
