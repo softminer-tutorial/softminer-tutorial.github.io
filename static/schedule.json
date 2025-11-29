@@ -1,86 +1,120 @@
 {
-  "days": [
+  "tutorialInfo": {
+    "format": "Half-day (≈3.5–4 hours total, including a 30-minute coffee break)",
+    "description": "Short lectures with focused demos and Q&A. The flow mirrors classic NLP tutorial structuring (background → cases/defences → evaluation/roadmap) while concentrating on 2023–2025 advances."
+  },
+  "sessions": [
     {
-      "dayNumber": 1,
-      "dayTitle": "Day 1: Foundations of AI Safety",
-      "date": "XX Month YYYY",
-      "sessions": [
+      "sessionNumber": 1,
+      "sessionTitle": "Session 1: How safety fails in 2025",
+      "duration": "80 minutes",
+      "segments": [
         {
-          "time": "9:00—9:15",
-          "title": "Introduction to AI Safety and Risks",
+          "time": "15'",
+          "title": "1. LLM Safety Primer",
+          "description": "Scope: harmlessness/helpfulness/honesty; harms taxonomy (bias/toxicity, hallucination, privacy leakage, disinformation, unsafe assistance).",
           "topics": [
-            "Overview of harmful content, societal/ethical risks",
-            "Deceptive behavior, persuasive behavior",
-            "Possibility of \"model consciousness\" or self-awareness"
-          ],
-          "isBreak": false
+            "What's new since 2023: multilingual/code-mixed failures",
+            "Multimodal typographic attacks",
+            "Agentic failure modes in tool-augmented systems"
+          ]
         },
         {
-          "time": "9:15—10:00",
-          "title": "LLM Safety, Jailbreak, and Harmful Content",
+          "time": "25'",
+          "title": "2. Failure Modes",
           "topics": [
-            "Common attack vectors and jailbreak techniques",
-            "Real-world examples of harmful or disallowed outputs",
-            "Defense approaches at training-time and inference-time"
-          ],
-          "isBreak": false
+            "Prompt-level jailbreaks & evasions: euphemisms; context switching; role-play/virtual simulation; task-format asymmetries (e.g., summarization vs QA)",
+            "Decoding/activation manipulation: when sampling, logits, or activation steering open \"glide paths\" around alignment",
+            "Multimodal jailbreaks: typography and icons; flowchart-style logic images; cross-modal indirection and weak compositionality in VLMs",
+            "Model Editing: stealth safety erasure, localized backdoors/trigger phrases, capability insertion in specific languages/modalities"
+          ]
         },
         {
-          "time": "10:00—10:30",
-          "title": "Multi-modal and Agentic AI Safety",
-          "topics": [
-            "Vulnerabilities in text, image, audio, and video models",
-            "Risks of agentic AI systems taking autonomous actions",
-            "Red-teaming methods for complex, multi-modal systems"
-          ],
-          "isBreak": false
+          "time": "35'",
+          "title": "3. Deep-dive: Monolingual Solutions and Case Studies",
+          "papers": [
+            {
+              "title": "Language Models are Homer Simpson! Safety Re-Alignment of Fine-tuned Language Models through Task Arithmetic",
+              "authors": "Bhardwaj et al.",
+              "venue": "ACL 2024",
+              "url": "https://aclanthology.org/2024.acl-long.762/"
+            },
+            {
+              "title": "SafeInfer: Context Adaptive Decoding Time Safety Alignment for Large Language Models",
+              "authors": "Banerjee et al.",
+              "venue": "AAAI 2025",
+              "url": "https://ojs.aaai.org/index.php/AAAI/article/view/30158"
+            },
+            {
+              "title": "Safety Arithmetic: A Framework for Test-time Safety Alignment of Language Models by Steering Parameters and Activations",
+              "authors": "Hazra et al.",
+              "venue": "EMNLP 2024",
+              "url": "https://aclanthology.org/2024.emnlp-main.1212/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "isBreak": true,
+      "title": "Coffee Break",
+      "duration": "30 minutes"
+    },
+    {
+      "sessionNumber": 2,
+      "sessionTitle": "Session 2: How to defend and how to measure",
+      "duration": "80 minutes",
+      "segments": [
+        {
+          "time": "40'",
+          "title": "4. Deep-dive: Multilingual and Multimodal Solutions and Case Studies",
+          "papers": [
+            {
+              "title": "Soteria: Language-Specific Functional Parameter Steering for Multilingual Safety Alignment",
+              "authors": "Banerjee et al.",
+              "venue": "2025",
+              "url": "https://arxiv.org/abs/2502.11244"
+            },
+            {
+              "title": "Navigating the Cultural Kaleidoscope: A Hitchhiker's Guide to Sensitivity in Large Language Models",
+              "authors": "Banerjee et al.",
+              "venue": "NAACL 2025",
+              "url": "https://aclanthology.org/2025.naacl-long.388/"
+            },
+            {
+              "title": "MemeSense: An Adaptive In-Context Framework for Social Commonsense Driven Meme Moderation",
+              "authors": "Adak et al.",
+              "venue": "2025",
+              "url": "https://arxiv.org/abs/2502.11246"
+            },
+            {
+              "title": "Immune: Improving Safety Against Jailbreaks in Multi-modal LLMs via Inference-Time Alignment",
+              "authors": "Ghosal et al.",
+              "venue": "CVPR 2025",
+              "url": "https://arxiv.org/abs/2411.18688"
+            }
+          ]
         },
         {
-          "time": "11:00—11:30",
-          "title": "Safe AI",
+          "time": "25'",
+          "title": "5. Evaluation & Red-teaming",
           "topics": [
-            "Handling deception, persuasion, and emergent behaviors",
-            "Ongoing debates around model \"consciousness\" and awareness"
-          ],
-          "isBreak": false
+            "Metrics: obedience/rejection, relevance/fluency, harmfulness/toxicity, overkill (helpfulness loss)",
+            "Testbeds: Do-Not-Answer; adversarial prompt generation (e.g., prompt-attack styles); multilingual suites; multimodal safety probes",
+            "Pipelines: automated red-team harnesses; measuring safety–utility balance; reporting standards"
+          ]
         },
         {
-          "time": "11:30—12:00",
-          "title": "Defense",
+          "time": "20'",
+          "title": "6. Open Problems & Roadmap",
           "topics": [
-            "Layered strategies (training data, architecture, prompt engineering)",
-            "Real-time detection, filtering, and adversarial testing"
-          ],
-          "isBreak": false
-        },
-        {
-          "time": "12:00—1:00",
-          "title": "Lunch Break",
-          "topics": [],
-          "isBreak": true
-        },
-        {
-          "time": "1:00—2:00",
-          "title": "Hands-on Workshop: Red Teaming",
-          "topics": [
-            "Practical exercises in identifying vulnerabilities",
-            "Testing defense mechanisms",
-            "Group discussions on findings"
-          ],
-          "isBreak": false
-        },
-        {
-          "time": "2:00—2:30",
-          "title": "Case Studies",
-          "topics": [
-            "Real-world incidents and lessons learned",
-            "Industry best practices",
-            "Future challenges"
-          ],
-          "isBreak": false
+            "Affordance (risk-aware alignment): As models gain tools (code exec, web, files, images), even benign prompts can unlock risky actions the user didn't intend. Safety is needed to detect those latent capabilities and gate or steer them in real time so small requests don't escalate into harmful operations.",
+            "Pluralistic alignment: Real users span empathy, sensitivity, and values; a single global policy either over-blocks or harms specific groups. Safety is needed to respect legitimate differences—selecting the right norms per context—while keeping outputs lawful, fair, and still useful.",
+            "Implicit-math evasion: Harmful requests can be disguised as innocent arithmetic or optimization (e.g., splitting quantities across sources, unit conversions, route planning). Safety is needed to track restricted entities and totals across steps, normalize units, and block aggregation-based procurement even when posed as \"just math.\"",
+            "Domain-specific safeguards: Use domain-aware tagging and global constraints (hazard classes, thresholds, legality checks) that persist across turns, not just per-message screening; if a restricted entity is detected anywhere in the chain, enforce refusal and pivot to safe, educational alternatives."
+          ]
         }
       ]
     }
   ]
 }
-

@@ -53,69 +53,78 @@ async function loadSchedule() {
         const data = await response.json();
         
         const scheduleContent = document.getElementById('scheduleContent');
-        if (!scheduleContent || !data.days) return;
+        if (!scheduleContent || !data.sessions) return;
         
         let html = '';
+        
         if (data.tutorialInfo) {
             html += `
-                <div class="tutorial-info">
-                    <p><strong>Date:</strong> ${data.tutorialInfo.date}</p>
-                    <p><strong>Time:</strong> ${data.tutorialInfo.time}</p>
-                    <p><strong>Location:</strong> ${data.tutorialInfo.location}</p>
+                <div class="tutorial-info-schedule">
+                    <p><strong>Format:</strong> ${data.tutorialInfo.format}</p>
+                    <p>${data.tutorialInfo.description}</p>
                 </div>
             `;
         }
         
-        data.days.forEach(day => {
-            if (data.days.length > 1) {
+        data.sessions.forEach(session => {
+            if (session.isBreak) {
                 html += `
-                    <div class="day-header">
-                        <h3>${day.dayTitle}</h3>
-                        <p class="day-date">${day.date}</p>
+                    <div class="break-section">
+                        <div class="break-label">Break</div>
+                        <h3>${session.title}</h3>
+                        <p class="break-duration">${session.duration}</p>
                     </div>
                 `;
+            } else {
+                html += `
+                    <div class="session-block">
+                        <div class="session-header">
+                            <h3>${session.sessionTitle}</h3>
+                            <span class="session-duration">${session.duration}</span>
+                        </div>
+                `;
+                
+                session.segments.forEach(segment => {
+                    html += `
+                        <div class="segment-item">
+                            <div class="segment-header">
+                                <span class="segment-time">${segment.time}</span>
+                                <h4 class="segment-title">${segment.title}</h4>
+                            </div>
+                    `;
+                    
+                    if (segment.description) {
+                        html += `<p class="segment-description">${segment.description}</p>`;
+                    }
+                    
+                    if (segment.topics && segment.topics.length > 0) {
+                        html += '<ul class="segment-topics">';
+                        segment.topics.forEach(topic => {
+                            html += `<li>${topic}</li>`;
+                        });
+                        html += '</ul>';
+                    }
+                    
+                    if (segment.papers && segment.papers.length > 0) {
+                        html += '<div class="segment-papers">';
+                        segment.papers.forEach(paper => {
+                            html += `
+                                <div class="paper-item">
+                                    <a href="${paper.url}" target="_blank" rel="noopener noreferrer" class="paper-link">
+                                        <span class="paper-title">${paper.title}</span>
+                                        <span class="paper-meta">${paper.authors}, ${paper.venue}</span>
+                                    </a>
+                                </div>
+                            `;
+                        });
+                        html += '</div>';
+                    }
+                    
+                    html += `</div>`;
+                });
+                
+                html += `</div>`;
             }
-            
-            // Generate schedule table
-            html += `
-                <div class="schedule-table-wrapper">
-                    <table class="schedule-table">
-                        <thead>
-                            <tr>
-                                <th>Time</th>
-                                <th>Section</th>
-                                <th>Topics</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-            `;
-            
-            day.sessions.forEach(session => {
-                const rowClass = session.isBreak ? ' class="break-row"' : '';
-                if (session.isBreak) {
-                    html += `
-                        <tr${rowClass}>
-                            <td>${session.time}</td>
-                            <td colspan="2">${session.title}</td>
-                        </tr>
-                    `;
-                } else {
-                    const topicsList = session.topics.map(topic => `• ${topic}`).join('<br>');
-                    html += `
-                        <tr${rowClass}>
-                            <td>${session.time}</td>
-                            <td>${session.title}</td>
-                            <td>${topicsList}</td>
-                        </tr>
-                    `;
-                }
-            });
-            
-            html += `
-                        </tbody>
-                    </table>
-                </div>
-            `;
         });
         
         scheduleContent.innerHTML = html;

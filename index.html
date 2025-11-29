@@ -27,6 +27,7 @@
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#target-audience" class="nav-link">Audience</a></li>
                 <li><a href="#schedule" class="nav-link">Schedule</a></li>
                 <li><a href="#reading-list" class="nav-link">Reading List</a></li>
                 <li><a href="#slides" class="nav-link">Slides</a></li>
@@ -68,10 +69,33 @@
                 <p><strong>Location:</strong> <span id="tutorial-location">TBD</span></p>
             </div>
             <p>
-                This tutorial will provide a fresh and comprehensive view of AI safety, examining issues such as harmful content, deceptive/persuasive model behaviors, and the possibility of "model consciousness." We will cover both theoretical and practical aspects of large language models (LLMs), multi-modal systems, and agentic AI, illustrating how to identify and address vulnerabilities—from common jailbreak attacks to complex, autonomous decision-making scenarios.
+                LLMs are now embedded in workflows that span languages, modalities, and tools. This raises safety challenges that outpace conventional "guardrails": jailbreaks and prompt injections, attributional safety failures under code-mixing, multimodal bypass via typography and icons, activation-level manipulation, and agentic risks from tool use.
             </p>
             <p>
-                Attendees will learn cutting-edge attack and defense techniques, and will explore emerging research directions that balance AI innovation with robust safety strategies. This tutorial is geared toward AI researchers, developers, and security professionals who aim to stay ahead of evolving threats and ensure responsible development of next-generation AI systems.
+                This tutorial synthesizes <strong> the newest advances (2023–2025) </strong> and lays out <strong>open research questions </strong> around (i) failure modes in monolingual / multilingual / multimodal settings, (ii) training-time and inference-time defenses (rejection SFT, RLHF/RLAIF, decoding-time safety, parameter/activation steering), and (iii) evaluation and red-teaming pipelines balancing safety and utility.
+            </p>
+            <p>
+                We anchor the tutorial with recent results including our safety related papers published at top tier conferences, and connect them to emerging best practices from recent safety tutorials. The target audience is researchers/engineers with basic NLP knowledge who want the latest techniques and a research roadmap; format is half-day with short demos and Q&A.
+            </p>
+        </section>
+
+        <!-- Target Audience Section -->
+        <section class="target-audience animate-on-scroll" id="target-audience">
+            <h2>Target Audience</h2>
+            <ul class="audience-list">
+                <li>NLP researchers, applied scientists, industry professionals, and practitioners working with LLMs.</li>
+                <li>Red-teamers / robustness and security researchers.</li>
+                <li>Policy/governance professionals seeking a technical grounding in LLM safety.</li>
+            </ul>
+            
+            <h3>Prior Knowledge</h3>
+            <ul class="prerequisites-list">
+                <li>Transformers, fine-tuning, and basic evaluation; Python proficiency is helpful; prior experience in AI Safety is not required.</li>
+                <li>Optional but useful: familiarity with multilingual NLP and/or basic computer vision.</li>
+            </ul>
+            
+            <p class="expected-participants">
+                <strong>Expected participants:</strong> 60–90, based on recent safety tutorials' attendance and the cross-disciplinary interest in multilingual and agentic safety.
             </p>
         </section>
 
@@ -87,7 +111,11 @@
         <!-- Reading List Section -->
         <section class="reading-list animate-on-scroll" id="reading-list">
             <h2>Reading List</h2>
-            <p class="section-intro">We've compiled a comprehensive reading list of papers related to AI safety. If you think that we're missing essential papers, please submit a pull request.</p>
+            <p class="section-intro">We've compiled a comprehensive reading list of papers related to AI safety. If you have <strong>accepted papers</strong> in relevant areas, please <strong>submit a pull request</strong> to have them considered for inclusion in the tutorial.</p>
+            <div class="reading-list-note">
+                <div class="note-header">Submit Your Accepted Papers</div>
+                <p>If your paper has been accepted at a major conference or journal and relates to LLM safety, multilingual AI, multimodal security, or agentic AI risks, we invite you to submit it via pull request. The organizers will review all submissions, and accepted papers will be covered in this tutorial and cited in our materials. We especially welcome recent work (2023–2025) on multilingual safety, multimodal jailbreaks, and agentic AI risks.</p>
+            </div>
             <!-- Content loaded from data/reading-list.json -->
         </section>
 
@@ -133,11 +161,8 @@
         <!-- Footer -->
         <footer>
             <div class="footer-bottom">
-                <p class="footer-license">
-                    This website is licensed under a 
-                    <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">
-                        Creative Commons Attribution-ShareAlike 4.0 International License
-                    </a>.
+                <p class="footer-maintainer">
+                    Maintainer: <strong>Bikram Ghuku</strong>, Undergraduate Student, Indian Institute of Technology, Kharagpur
                 </p>
                 <p class="footer-source">
                     <a href="https://github.com/yourusername/tutorial" target="_blank" rel="noopener noreferrer">
