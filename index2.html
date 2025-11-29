@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Safety Tutorial · ACL Asia-Pacific 2025</title>
+    <link rel="stylesheet" href="styles2.css">
+    <script src="js/main2.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-org">ACL Asia-Pacific</span>
+                <span class="nav-type">Tutorial · LLM Safety</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#overview" class="nav-link">Overview</a></li>
+                <li><a href="#abstract" class="nav-link">Abstract</a></li>
+                <li><a href="#outline" class="nav-link">Outline</a></li>
+                <li><a href="#reading-list" class="nav-link">Papers</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="overview">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Safety Issues for Generative AI</h1>
+                <p class="hero-subtitle">A comprehensive tutorial covering jailbreaks, multilingual safety, multimodal vulnerabilities, and agentic AI risks with the latest defense strategies and evaluation methods.</p>
+                
+                <div class="hero-actions">
+                    <a href="static/tutorial.pdf" class="btn-primary" download>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download Slides
+                    </a>
+                    <a href="static/tutorial.pdf" class="btn-secondary" target="_blank">
+                        View Materials
+                    </a>
+                </div>
+
+                <div class="tutorial-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Date:</span>
+                        <span class="meta-value">To be announced</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Time:</span>
+                        <span class="meta-value">Half-day (3.5–4 hours)</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Location:</span>
+                        <span class="meta-value">Mumbai, India</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presenters Section -->
+    <section class="presenters">
+        <div class="container">
+            <h2 class="section-title">Tutorial Presenters</h2>
+            <div id="presentersGrid" class="presenters-grid">
+                <!-- Loaded dynamically from static/team.json -->
+            </div>
+            <div id="affiliationsList" class="affiliations-list">
+                <!-- Loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Abstract Section -->
+    <section class="content-section" id="abstract">
+        <div class="container">
+            <h2 class="section-title">Tutorial Overview</h2>
+            
+            <div class="overview-content">
+                <h3 class="subsection-title">Abstract</h3>
+                <p>LLMs are now embedded in workflows that span languages, modalities, and tools. This raises safety challenges that outpace conventional "guardrails": jailbreaks and prompt injections, attributional safety failures under code-mixing, multimodal bypass via typography and icons, activation-level manipulation, and agentic risks from tool use. This tutorial synthesizes the newest advances (2023–2025) and lays out open research questions around (i) failure modes in monolingual / multilingual / multimodal settings, (ii) training-time and inference-time defenses (rejection SFT, RLHF/RLAIF, decoding-time safety, parameter/activation steering), and (iii) evaluation and red-teaming pipelines balancing safety and utility. We anchor the tutorial with recent results including our safety related papers published at top tier conferences, and connect them to emerging best practices from recent safety tutorials.</p>
+            </div>
+
+            <div class="overview-content">
+                <h3 class="subsection-title">Target Audience</h3>
+                <ul class="audience-list">
+                    <li>NLP researchers, applied scientists, industry professionals, and practitioners working with LLMs</li>
+                    <li>Red-teamers / robustness and security researchers</li>
+                    <li>Policy/governance professionals seeking a technical grounding in LLM safety</li>
+                </ul>
+
+                <h4 class="mini-title">Prerequisites</h4>
+                <ul class="prereq-list">
+                    <li>Transformers, fine-tuning, and basic evaluation</li>
+                    <li>Python proficiency is helpful</li>
+                    <li>Prior experience in AI Safety is not required</li>
+                    <li><em>Optional but useful:</em> familiarity with multilingual NLP and/or basic computer vision</li>
+                </ul>
+
+                <p class="attendance-note"><strong>Expected participants:</strong> 60–90, based on recent safety tutorials' attendance and the cross-disciplinary interest in multilingual and agentic safety.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outline Section -->
+    <section class="content-section outline-section" id="outline">
+        <div class="container">
+            <h2 class="section-title">Tutorial Outline</h2>
+            <p class="section-intro">Half-day format (≈3.5–4 hours total, including a 30-minute coffee break). Short lectures with focused demos and Q&A.</p>
+            
+            <div id="outlineContent" class="outline-content">
+                <!-- Loaded dynamically from static/schedule.json -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Reading List Section -->
+    <section class="content-section" id="reading-list">
+        <div class="container">
+            <h2 class="section-title">Reading List</h2>
+            <p class="section-intro">We've compiled a comprehensive reading list of papers related to AI safety. If you have <strong>accepted papers</strong> in relevant areas, please submit a pull request to have them considered for inclusion.</p>
+            
+            <div class="paper-submission-note">
+                <h4 class="note-title">Submit Your Accepted Papers</h4>
+                <p>If your paper has been accepted at a major conference or journal and relates to LLM safety, multilingual AI, multimodal security, or agentic AI risks, we invite you to submit it via pull request. The organizers will review all submissions, and accepted papers will be covered in this tutorial and cited in our materials.</p>
+            </div>
+
+            <div id="readingListContent" class="reading-list-content">
+                <!-- Loaded dynamically from static/reading-list.json -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="content-section contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div id="contactContent" class="contact-content">
+                <!-- Loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-maintainer">Website maintained by <strong>Bikram Ghuku</strong>, Undergraduate Student, Indian Institute of Technology, Kharagpur</p>
+            <p class="footer-copyright">© 2025 ACL Asia-Pacific Tutorial. All rights reserved.</p>
+            <p class="footer-top">
+                <a href="#overview">Back to top ↑</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug - Check Data Loading</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            padding: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .status {
+            padding: 12px 20px;
+            margin: 10px 0;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+        .success {
+            background: #d1fae5;
+            color: #065f46;
+            border: 1px solid #10b981;
+        }
+        .error {
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #ef4444;
+        }
+        .data-preview {
+            background: #f3f4f6;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 10px 0;
+            max-height: 200px;
+            overflow: auto;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+        h2 {
+            margin-top: 30px;
+            color: #1f2937;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Loading Debug Page</h1>
+    <p>This page checks if all data files are loading correctly.</p>
+
+    <h2>1. Team Data (Presenters & Contact)</h2>
+    <div id="teamStatus">Loading...</div>
+    <div id="teamPreview" class="data-preview"></div>
+
+    <h2>2. Schedule Data (Outline)</h2>
+    <div id="scheduleStatus">Loading...</div>
+    <div id="schedulePreview" class="data-preview"></div>
+
+    <h2>3. Reading List Data</h2>
+    <div id="readingStatus">Loading...</div>
+    <div id="readingPreview" class="data-preview"></div>
+
+    <h2>Actions</h2>
+    <p>
+        <a href="index2.html" style="display: inline-block; padding: 10px 20px; background: #1e3a8a; color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">View Main Website</a>
+    </p>
+
+    <script>
+        async function checkFile(file, statusId, previewId) {
+            try {
+                const response = await fetch(file);
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+                const data = await response.json();
+                
+                document.getElementById(statusId).className = 'status success';
+                document.getElementById(statusId).textContent = `✓ Loaded successfully from ${file}`;
+                
+                document.getElementById(previewId).textContent = JSON.stringify(data, null, 2);
+                
+                return data;
+            } catch (error) {
+                document.getElementById(statusId).className = 'status error';
+                document.getElementById(statusId).textContent = `✗ Error loading ${file}: ${error.message}`;
+                
+                document.getElementById(previewId).textContent = `Error: ${error.message}`;
+                
+                return null;
+            }
+        }
+
+        async function runChecks() {
+            const teamData = await checkFile('static/team.json', 'teamStatus', 'teamPreview');
+            const scheduleData = await checkFile('static/schedule.json', 'scheduleStatus', 'schedulePreview');
+            const readingData = await checkFile('static/reading-list.json', 'readingStatus', 'readingPreview');
+
+            // Additional validation
+            if (teamData) {
+                console.log('Team organizers found:', teamData.organizers?.length || 0);
+                console.log('Affiliations found:', teamData.affiliations?.length || 0);
+            }
+
+            if (scheduleData) {
+                console.log('Sessions found:', scheduleData.sessions?.length || 0);
+            }
+
+            if (readingData) {
+                console.log('Papers found:', readingData.papers?.length || 0);
+            }
+        }
+
+        runChecks();
+    </script>
+</body>
+</html>
+
