@@ -288,8 +288,8 @@ body {
 }
 
 .organizer-item img {
-	width: 100px;
-	height: 100px;
+	width: 150px;
+	height: 150px;
 	object-fit: cover;
 	border: 3px solid transparent;
 	background: linear-gradient(white, white) padding-box,
@@ -297,6 +297,7 @@ body {
 	transition: all var(--transition-base);
 	margin-bottom: 10px;
 	box-shadow: var(--shadow);
+	border-radius: 50%;
 }
 
 .organizer-item img:hover {
@@ -1273,10 +1274,10 @@ footer {
 	}
 
 	.organizer-item img {
-		width: 80px;
-		height: 80px;
-		border-width: 2px;
-		margin-bottom: 8px;
+		width: 120px;
+		height: 120px;
+		border-width: 3px;
+		margin-bottom: 10px;
 	}
 
 	.organizer-name-with-sup {
@@ -1436,9 +1437,9 @@ footer {
 	}
 
 	.organizer-item img {
-		width: 70px;
-		height: 70px;
-		margin-bottom: 6px;
+		width: 100px;
+		height: 100px;
+		margin-bottom: 8px;
 	}
 
 	.organizer-name-with-sup {

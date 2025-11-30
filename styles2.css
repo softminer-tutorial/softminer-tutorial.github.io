@@ -8,16 +8,17 @@
 }
 
 :root {
-    /* Colors - Professional Blue Palette */
-    --primary: #1e3a8a;
-    --primary-dark: #1e40af;
+    /* Colors - Clean Minimal Palette (ALTA-inspired) */
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
     --primary-light: #3b82f6;
-    --accent: #0891b2;
-    --text-dark: #1f2937;
-    --text-body: #4b5563;
-    --text-light: #6b7280;
-    --border: #e5e7eb;
-    --bg-light: #f9fafb;
+    --accent: #0ea5e9;
+    --text-dark: #0f172a;
+    --text-body: #475569;
+    --text-light: #64748b;
+    --border: #e2e8f0;
+    --bg-light: #f8fafc;
+    --bg-section: #f1f5f9;
     --white: #ffffff;
     
     /* Typography */
@@ -36,6 +37,7 @@ body {
     font-family: var(--font-sans);
     color: var(--text-body);
     line-height: 1.7;
+    background: var(--white);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -54,11 +56,11 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: var(--white);
     border-bottom: 1px solid var(--border);
     z-index: 1000;
     transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .nav-container {
@@ -130,7 +132,7 @@ body {
    ======================================== */
 .hero {
     padding: 140px 0 80px;
-    background: linear-gradient(180deg, #fafbfc 0%, #ffffff 100%);
+    background: var(--white);
 }
 
 .hero-content {
@@ -142,10 +144,10 @@ body {
 .hero-title {
     font-size: 3em;
     color: var(--text-dark);
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 20px;
     line-height: 1.2;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
 }
 
 .hero-subtitle {
@@ -181,13 +183,13 @@ body {
 .btn-primary {
     background: var(--primary);
     color: var(--white);
-    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
 }
 
 .btn-primary:hover {
     background: var(--primary-dark);
-    box-shadow: 0 6px 16px rgba(30, 58, 138, 0.3);
-    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    transform: translateY(-1px);
 }
 
 .btn-secondary {
@@ -205,10 +207,9 @@ body {
     gap: 40px;
     justify-content: center;
     padding: 30px;
-    background: var(--white);
-    border-radius: 12px;
+    background: var(--bg-light);
+    border-radius: 8px;
     border: 1px solid var(--border);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .meta-item {
@@ -240,15 +241,19 @@ body {
 }
 
 .content-section {
-    border-top: 1px solid var(--border);
+    background: var(--white);
+}
+
+.content-section:nth-child(even) {
+    background: var(--bg-light);
 }
 
 .section-title {
-    font-size: 2em;
+    font-size: 2.2em;
     color: var(--text-dark);
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 30px;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
 }
 
 .section-intro {
@@ -273,13 +278,18 @@ body {
 }
 
 .presenter-photo {
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
     margin: 0 auto 16px;
     display: block;
-    border: 3px solid var(--border);
+    border: 2px solid var(--border);
+    transition: transform 0.2s ease;
+}
+
+.presenter-photo:hover {
+    transform: scale(1.05);
 }
 
 .presenter-name {
@@ -403,7 +413,7 @@ body {
    Outline Section
    ======================================== */
 .outline-section {
-    background: var(--bg-light);
+    background: var(--white);
 }
 
 .outline-content {
@@ -416,18 +426,24 @@ body {
     padding: 32px;
     margin-bottom: 24px;
     border: 1px solid var(--border);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.2s ease;
+}
+
+.outline-session:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .session-number {
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     background: var(--primary);
     color: var(--white);
     border-radius: 50%;
     text-align: center;
-    line-height: 50px;
-    font-size: 1.3em;
+    line-height: 48px;
+    font-size: 1.2em;
     font-weight: 700;
     margin-bottom: 16px;
 }
@@ -598,7 +614,7 @@ body {
    Reading List
    ======================================== */
 .paper-submission-note {
-    background: var(--white);
+    background: var(--bg-light);
     border: 1px solid var(--border);
     border-left: 4px solid var(--primary);
     border-radius: 8px;
@@ -725,7 +741,7 @@ body {
    Footer
    ======================================== */
 .footer {
-    background: var(--bg-light);
+    background: var(--white);
     border-top: 1px solid var(--border);
     padding: 40px 0;
     text-align: center;
