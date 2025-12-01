@@ -179,7 +179,7 @@ body {
 		var(--primary) 0%,
 		var(--primary-dark) 100%
 	);
-	background-image: url('static/banner.jpg');
+	background-image: url('static/banner.png');
 	background-size: cover;
 	background-position: center;
 	position: relative;
@@ -443,6 +443,18 @@ section p {
 .tutorial-info strong {
 	color: var(--dark);
 	font-weight: 600;
+}
+
+.visitor-count {
+	margin-top: 8px;
+	font-size: 0.95em;
+	color: var(--gray-600);
+}
+
+.visitor-count-img {
+	display: inline-block;
+	margin-left: 8px;
+	vertical-align: middle;
 }
 
 /* Target Audience Section */
