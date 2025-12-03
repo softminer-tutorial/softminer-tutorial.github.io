@@ -1,3 +1,11 @@
 {
-  "papers": []
+  "papers": [{
+    "title":"MemeSense: An Adaptive In-Context Framework for Social Commonsense Driven Meme Moderation",
+    "link": "https://arxiv.org/pdf/2502.11246"
+  },{
+    "title": "AURA: Affordance-Understanding and Risk-aware Alignment Technique for Large Language Models",
+    "link": "https://arxiv.org/pdf/2508.06124"
+  }
+
+]
 }
